@@ -13,12 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.contentSize = feedImageView.frame.size
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as! PhotoViewController
+        destinationViewController.image = destinationViewController.imageView.image
+    }
     
     @IBAction func didTapImage(_ sender: AnyObject) {
         
@@ -26,9 +31,9 @@ class ViewController: UIViewController {
         
         
     }
+
     
-
-
+    
 
 }
 

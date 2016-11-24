@@ -107,6 +107,7 @@
         <!--PhotoViewController-->
         <scene sceneID="DzB-1U-fgB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPI-n3-bMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PhotoViewController" title="PhotoViewController" id="NFV-U4-ntJ" customClass="PhotoViewController" customModule="facebook_feed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkx-qN-Mc6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -116,8 +117,8 @@
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P1H-xI-bzX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="P1H-xI-bzX">
+                                        <rect key="frame" x="0.0" y="63" width="375" height="559"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -125,21 +126,32 @@
                                         <rect key="frame" x="295" y="28" width="51" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="doneButton"/>
+                                        <connections>
+                                            <action selector="didTapDone:" destination="NFV-U4-ntJ" eventType="touchUpInside" id="6Dn-js-G1d"/>
+                                        </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="photo_actions" id="Zdx-fK-AwV">
+                                        <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="P1H-xI-bzX" id="aw1-3F-9fI"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LPI-n3-bMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675.5" y="-362.50000000000006"/>
+            <point key="canvasLocation" x="675.5" y="-362.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="doneButton" width="51" height="27"/>
         <image name="home_feed" width="320" height="1438"/>
+        <image name="photo_actions" width="320" height="44"/>
         <image name="wedding1" width="320" height="480"/>
         <image name="wedding2" width="480" height="320"/>
         <image name="wedding3" width="480" height="320"/>
